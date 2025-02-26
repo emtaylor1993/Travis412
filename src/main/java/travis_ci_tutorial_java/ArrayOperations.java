@@ -1,34 +1,27 @@
 package travis_ci_tutorial_java;
 
-public class ArrayOperations 
-{
+public class ArrayOperations {
 // Adapted from "Introduction to Software Testing", 
 // by Ammann and Offutt 
 	
-   public static int numZero(int[] x) 
-   {
+   public static int numZero(int[] x) {
       // Effects: if x == null throw NullPointerException 
       // else return the number of occurrences of 0 in x
       int count = 0;
-      for (int i=0; i<x.length; i++)
+      for (int i = 0; i < x.length; i++)
          if (x[i] == 0) 
             count++;
       return count;
    }
- 
-   
-   public static int add(int a, int b)
-   {
+  
+   public static int add(int a, int b) {
 	   return a+b;
    }
    
-   
-   public static int findLast(int[] x, int y) 
-   {
+   public static int findLast(int[] x, int y) {
       if (x == null) 
          throw new NullPointerException();
-      for (int i=x.length-1; i>0; i--) 
-      {
+      for (int i = x.length - 1; i > 0; i--) {
          if (x[i] == y) 
             return i; 
       }
@@ -37,14 +30,11 @@ public class ArrayOperations
    // test: x = [2, 3, 5]; y = 2; 
    // expected = 0
 
-   
-   public static int countPositive (int[] x)
-   {  
+   public static int countPositive (int[] x) {  
       if (x == null) 
          throw new NullPointerException();
       int count = 0; 
-      for (int i=0; i<x.length; i++) 
-      {
+      for (int i=0; i<x.length; i++) {
          if (x[i] >= 0) 
             count++;
       }
@@ -53,9 +43,7 @@ public class ArrayOperations
    // test:  x = [-4, 2, 0, 2]             
    // expected = 2  
    
-   
-   public static int lastZero (int[] x) 
-   {
+   public static int lastZero (int[] x) {
       if (x == null) 
          throw new NullPointerException();
       for (int i=0; i<x.length; i++) 
@@ -68,14 +56,11 @@ public class ArrayOperations
    // test: x = [0, 1, 0]
    // expected = 2
 
-
-   public static int oddOrPos (int[] x) 
-   {  
+   public static int oddOrPos (int[] x) {  
       if (x == null) 
          throw new NullPointerException();
       int count = 0;   
-      for (int i=0; i<x.length; i++)  
-      {
+      for (int i=0; i<x.length; i++) {
          if (x[i] % 2 == 1 || x[i] > 0) 
             count++; 
       }   
@@ -83,5 +68,4 @@ public class ArrayOperations
    }
    // test: x = [-3, -2, 0, 1, 4]           
    // expected = 3
-
 }
