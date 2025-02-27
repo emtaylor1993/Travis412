@@ -1,6 +1,5 @@
 package travis_ci_tutorial_java;
 
-import java.util.*;
 import static org.junit.Assert.*;
 import org.junit.*;
 
@@ -14,6 +13,6 @@ public class SimpleCalculatorTest {
 	@Test
 	public void testSubtract() {
 		SimpleCalculator calc = new SimpleCalculator();
-		asserEquals(calc.subtract(5, 3), 2);
+		assertEquals(calc.subtract(5, 3), 2);
 	}
 }
