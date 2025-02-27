@@ -15,4 +15,21 @@ public class SimpleCalculatorTest {
 		SimpleCalculator calc = new SimpleCalculator();
 		assertEquals(calc.subtract(5, 3), 2);
 	}
+
+	@Test
+	public void testMultiply() {
+		SimpleCalculator calc = new SimpleCalculator();
+		assertEquals(calc.multiply(2, 2), 4);
+	}
+
+	@Test
+	public void testDivide() {
+		SimpleCalculator calc = new SimpleCalculator();
+		assertEquals(calc.divide(4, 2), 2);
+	}
+
+	@Test(expected = ArithmeticException.class)
+	public void testDivideByZero() {
+		SimpleCalculator.divide(4, 0);
+	}
 }
