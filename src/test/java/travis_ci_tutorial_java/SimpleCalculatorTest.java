@@ -30,6 +30,7 @@ public class SimpleCalculatorTest {
 
 	@Test(expected = ArithmeticException.class)
 	public void testDivideByZero() {
-		SimpleCalculator.divide(4, 0);
+		SimpleCalculator calc = new SimpleCalculator();
+		calc.divide(4, 0);
 	}
 }
